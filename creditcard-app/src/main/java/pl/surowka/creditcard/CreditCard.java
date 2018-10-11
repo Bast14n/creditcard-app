@@ -6,7 +6,7 @@ class CreditCard{
         
     }
     
-    public void getLimit(){
+    public double getLimit(){
         
         return 2000;
     }
