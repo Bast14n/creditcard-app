@@ -16,7 +16,7 @@ public class CreditCardTest{
     }
 
     @Test
-    void cantDrawOverTheLimit{
+    void cantDrawOverTheLimited{
 
     }
 }
