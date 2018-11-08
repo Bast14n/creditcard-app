@@ -3,6 +3,19 @@ package pl.surowka.creditcard;
 class CreditCard{
     private double balance; 
     private double cardLimit;
+    private String number;
+    
+    public CreditCard(String number){
+        this.number = number;
+    }
+    
+    public CreditCard(){
+        
+    }
+    
+    public String getNumber(){
+        return number;
+    }
     
     private boolean status;
     
@@ -30,6 +43,14 @@ class CreditCard{
     }
 
     public void withdraw(double money){
+        /*
+        if(money > balance) {
+            throw new ToMuchMoneyException();
+        }
+        if(isBlocked()){
+            throw new CardIsBlockedException();
+        }
+        */
         this.balance-=money;
     }
     
@@ -38,4 +59,5 @@ class CreditCard{
 
     }
     
+   
 }
