@@ -42,15 +42,15 @@ class CreditCard{
         
     }
 
-    public void withdraw(double money){
-        /*
+    public void withdraw(double money) throws ToMuchMoneyException, CardIsBlockedException {
+
         if(money > balance) {
             throw new ToMuchMoneyException();
         }
         if(isBlocked()){
             throw new CardIsBlockedException();
         }
-        */
+
         this.balance-=money;
     }
     

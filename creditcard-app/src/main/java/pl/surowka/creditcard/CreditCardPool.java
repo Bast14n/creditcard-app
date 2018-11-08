@@ -3,7 +3,7 @@ package pl.surowka.creditcard;
 import java.util.Map;
 import java.util.HashMap;
 
-class CreditCardPool{
+public class CreditCardPool{
     private Map<String,CreditCard> cards = new HashMap<String,CreditCard>();
     
     public void add (CreditCard card){

@@ -1,5 +1,6 @@
 package pl.surowka.creditcard;
 
+
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -10,12 +11,12 @@ class CreditCardPool{
     public void allowAddAndFindCArd(){
         CreditCardPool pool = new CreditCardPool();
         CreditCard c = new CreditCard();
+
+        //pool.add(c);
         
-        pool.add(c);
+      //  CreditCard loaded = pool.find(number);
         
-        CreditCard loaded = pool.find(number);
-        
-        Assert.assertTrue(loaded.getNumber().isEquals(number));
+       // Assert.assertTrue(loaded.getNumber().isEquals(number));
         
     }
     

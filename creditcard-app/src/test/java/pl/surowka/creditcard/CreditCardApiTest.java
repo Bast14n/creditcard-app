@@ -14,7 +14,7 @@ public class CreditCardApiTest{
     public void handleWithDraw(){
         thereIsCreditCardPool();
         thereIsCreditCardApi();
-        thereIsCardWithNumber();
+        thereIsCardWithNumber(cardNumber);
         
         api.withdraw(cardNumber, 20);
         
@@ -25,17 +25,20 @@ public class CreditCardApiTest{
         this.api = new CreditCardApi();
     }
     
-    private void thereIsCardWithNumber(){
-        CreditCard card = creditCardPool.find(cardNumber);
+    private void thereIsCardWithNumber(String cardNumber){
+        CreditCard card = new CreditCard(cardNumber);
         card.assignLimit(initialCredit);
+
+
         
     }
     
     private void saldoOfCreditCardWithIdEquals(String cardNumber, double expectedBalance){
-        Assert.assertTrue(
-            card.getBalance() ==expectedBalance
-            
-            );
+        CreditCard c = new CreditCard(cardNumber);
+
+
+
+        //Assert.assertEquals();
     }
     
     private void thereIsCreditCardPool(){

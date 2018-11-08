@@ -28,9 +28,15 @@ public class CreditCardTest{
         CreditCard card = new CreditCard();
         
         card.assignLimit(2000);
-        
-        card.withdraw(1000);
-        
+
+        try {
+            card.withdraw(1000);
+        } catch (ToMuchMoneyException e) {
+            e.printStackTrace();
+        } catch (CardIsBlockedException e) {
+            e.printStackTrace();
+        }
+
         Assert.assertTrue(card.getBalance() == 1000);
         
 
